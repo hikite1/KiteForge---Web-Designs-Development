@@ -1,0 +1,14 @@
+{
+  "name": "kiteforge-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static site for KiteForge — no CMS, no server-side patching required.",
+  "scripts": {
+    "dev": "live-server --port=8080",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "live-server": "^1.2.2"
+  }
+}
