@@ -2,9 +2,10 @@
   "name": "kiteforge-website",
   "version": "0.1.0",
   "private": true,
-  "description": "Static site for KiteForge — no CMS, no server-side patching required.",
+  "description": "Static site for KiteForge: no CMS, no server-side patching required.",
   "scripts": {
     "dev": "live-server --port=8080",
+    "build": "bash ./scripts/build.sh",
     "test": "playwright test"
   },
   "devDependencies": {

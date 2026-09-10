@@ -3,62 +3,541 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KiteForge — Web Design & Development</title>
+  <title>KiteForge Web Design &amp; Social Media for Small Business</title>
+  <meta name="description" content="KiteForge builds fast, secure, low-maintenance websites for small businesses. Plus hosting, upkeep, and social media management.">
+  <link rel="canonical" href="https://kiteforge.org/">
+  <meta name="theme-color" content="#0a1220">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KiteForge">
+  <meta property="og:title" content="KiteForge Web Design &amp; Social Media for Small Business">
+  <meta property="og:description" content="Fast, secure, low-maintenance websites for small businesses. Plus hosting, upkeep, and social media management.">
+  <meta property="og:url" content="https://kiteforge.org/">
+  <meta property="og:image" content="https://kiteforge.org/assets/kiteforge-logo-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/kiteforge-icon.png">
+  <link rel="apple-touch-icon" href="assets/kiteforge-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "KiteForge",
+    "description": "Web design, hosting, maintenance, and social media management for small businesses.",
+    "url": "https://kiteforge.org/",
+    "email": "kiteforge1@gmail.com",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Orleans",
+      "addressRegion": "LA",
+      "addressCountry": "US"
+    },
+    "areaServed": "New Orleans, Louisiana",
+    "knowsAbout": ["Web design", "Static site development", "Website hosting", "Social media management"],
+    "sameAs": [
+      "https://www.facebook.com/kiteforgewebdesigns/",
+      "https://www.instagram.com/kiteforge1/"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="container">
-      <a href="/" class="logo">KiteForge</a>
-      <nav>
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="KiteForge home">
+        <img src="assets/kiteforge-icon.png" alt="" width="36" height="36" class="logo-mark">
+        <span class="logo-text">KiteForge</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Get a quote</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Websites that just work — and keep working.</h1>
-        <p>KiteForge builds fast, secure, low-maintenance websites for small businesses.</p>
-        <a href="#contact" class="btn">Get in touch</a>
-      </div>
-    </section>
+  <main id="main">
+    <span id="top"></span>
 
-    <section id="services" class="services">
-      <div class="container">
-        <h2>Services</h2>
-        <ul class="service-list">
-          <li>Custom site design &amp; build</li>
-          <li>Static site migration (no more CMS patching headaches)</li>
-          <li>Ongoing maintenance &amp; support</li>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Web design &amp; social media</p>
+        <h1>Websites that just work and keep working.</h1>
+        <p class="lede">
+          KiteForge builds fast, secure, low&#8209;maintenance websites for small
+          businesses, then keeps them running with hosting, upkeep, and social media
+          that actually gets posted.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get a quote</a>
+          <a href="#work" class="btn btn-ghost">See recent work</a>
+        </div>
+        <ul class="hero-points">
+          <li>No CMS to patch</li>
+          <li>Loads in under a second</li>
+          <li>One monthly bill</li>
         </ul>
       </div>
     </section>
 
-    <section id="work" class="work">
+    <section id="services" class="section">
       <div class="container">
-        <h2>Recent Work</h2>
-        <p class="placeholder-note">Client project links go here.</p>
+        <h2 class="section-title">What we do</h2>
+        <p class="section-intro">
+          Three things, done properly, so your site is handled end to end
+          instead of stitched together from five vendors.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Design &amp; build</h3>
+            <p>
+              Custom, mobile&#8209;first sites built on plain, modern web tech.
+              No page&#8209;builder bloat. Menus, galleries, maps, and contact details
+              wired in from the start.
+            </p>
+            <ul class="card-list">
+              <li>Custom design from your branding</li>
+              <li>Copywriting &amp; menu / PDF layout</li>
+              <li>SEO, sitemap, and structured data built in</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Hosting &amp; care</h3>
+            <p>
+              Your site lives on a fast global CDN with automatic HTTPS. We handle
+              updates, monitoring, and the small edits that pile up.
+            </p>
+            <ul class="card-list">
+              <li>Managed hosting &amp; SSL</li>
+              <li>Domain management</li>
+              <li>Uptime monitoring &amp; instant rollbacks</li>
+              <li>Monthly content edits</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Social media</h3>
+            <p>
+              Original content on a schedule: short videos and graphics made for
+              your business, posted twice a week so the feed stays alive.
+            </p>
+            <ul class="card-list">
+              <li>2 five-second videos &amp; 4 graphics / month</li>
+              <li>Posting to Facebook &amp; Instagram</li>
+              <li>Event creation on request</li>
+              <li>Account setup &amp; ad graphics</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="who" class="section section-alt">
       <div class="container">
-        <h2>Contact</h2>
-        <p>Reach out to talk about your project.</p>
+        <h2 class="section-title">Who it&rsquo;s for</h2>
+        <p class="section-intro">
+          Small, local businesses that need a site working for them, not another
+          system to babysit.
+        </p>
+
+        <ul class="industry-grid">
+          <li class="industry">
+            <img src="assets/industries/bars-restaurants.webp" alt="" width="720" height="480" loading="lazy">
+            <span>Bars &amp; restaurants</span>
+          </li>
+          <li class="industry">
+            <img src="assets/industries/food-trucks.webp" alt="" width="720" height="480" loading="lazy">
+            <span>Food trucks &amp; mobile businesses</span>
+          </li>
+          <li class="industry">
+            <img src="assets/industries/salons-studios.webp" alt="" width="720" height="480" loading="lazy">
+            <span>Salons, barbers &amp; tattoo studios</span>
+          </li>
+          <li class="industry">
+            <img src="assets/industries/fitness-freelance.webp" alt="" width="720" height="480" loading="lazy">
+            <span>Fitness, trainers &amp; freelancers</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="container">
+        <h2 class="section-title">Recent work</h2>
+        <p class="section-intro">
+          Current and past customers' sites that were created and managed by KiteForge Web Designs.
+        </p>
+
+        <div class="card-grid card-grid-2">
+          <article class="card project">
+            <p class="project-role">Website &amp; social media</p>
+            <h3>Molly&rsquo;s on Toulouse</h3>
+            <p>
+              French Quarter local Irish bar. Site with menu, events, and managed Social Media feeds.
+            </p>
+            <a class="project-link" href="https://mollystoulouse.com" target="_blank" rel="noopener">
+              mollystoulouse.com
+            </a>
+          </article>
+
+          <article class="card project">
+            <p class="project-role">Website &amp; social media</p>
+            <h3>Toulouse Dive Bar</h3>
+            <p>
+              Toulouse Street staple Dive Bar. Happy‑hour. Calendar, Drink Menu, and Map & Reviews.
+            </p>
+            <a class="project-link" href="https://toulousedive.com" target="_blank" rel="noopener">
+              toulousedive.com
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Straightforward pricing</h2>
+        <p class="section-intro">
+          Build once, then one predictable monthly bill for everything after.
+          See the
+          <a href="https://docs.google.com/document/d/1NmLmtrtOpGwl6_9BttoZZxtJYDxFVYYYKDL6CmU2p8E/edit" target="_blank" rel="noopener">full price list</a>
+          for every add-on and service.
+        </p>
+
+        <div class="card-grid">
+          <article class="card price">
+            <h3>Custom website</h3>
+            <p class="price-tag">$400 <span>per page</span></p>
+            <p>
+              Designed around your brand from scratch. Three content areas per page,
+              contact form, menus, and galleries included. Extra sections $100 each.
+            </p>
+          </article>
+
+          <article class="card price price-feature">
+            <h3>Care plans</h3>
+            <p class="price-tag">from $15 <span>/ month</span></p>
+            <p>
+              Hosting on a global CDN, SSL, domain management, and uptime monitoring.
+              Basic $15, Managed $35, Full Service $60. Higher tiers add content edits
+              and full support.
+            </p>
+          </article>
+
+          <article class="card price">
+            <h3>Social media</h3>
+            <p class="price-tag">$150 <span>/ month</span></p>
+            <p>
+              Two short videos and four graphics a month, posted twice a week to
+              Facebook and Instagram. Event creation on request.
+            </p>
+          </article>
+        </div>
+        <p class="note">
+          Domain is about $10 to $15 a year and stays in your name. SSL and backups are included free.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="section-title">Common questions</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Do I own my website?</summary>
+            <p>
+              Yes. You own the domain and every piece of content you provide. KiteForge
+              manages the hosting, security, and support on your plan. If you ever leave,
+              we hand everything over. No lock&#8209;in.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How long does a build take?</summary>
+            <p>
+              A typical small site goes live a few weeks after we have your branding and
+              content. Timelines depend on how fast revisions and material come back.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What do you need from me to start?</summary>
+            <p>
+              Your logo and brand colors, the text and photos for each section, and any
+              menus or PDFs. If you do not have copy, we write it as an add&#8209;on.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I make changes after launch?</summary>
+            <p>
+              Managed plans include one or two small edits a month. Full Service covers
+              unlimited edits within your existing pages. New sections or features are
+              quoted separately.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why not WordPress?</summary>
+            <p>
+              A static site has no database to hack and no plugins to patch, so it is
+              faster, safer, and cheaper to maintain. That is the whole point of the
+              move.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I pay?</summary>
+            <p>
+              The build fee is invoiced up front or split in two. Monthly plans are
+              billed monthly. Invoices are payable by card.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">How it goes</h2>
+
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <h3>Talk it through</h3>
+            <p>A short conversation about your business, your customers, and what the site needs to do.</p>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <h3>Design &amp; copy</h3>
+            <p>You see a real layout with real words, not a stock template. We revise until it fits.</p>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <h3>Build &amp; launch</h3>
+            <p>Built, tested, and pushed live on fast hosting with HTTPS and your domain.</p>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <h3>Keep it running</h3>
+            <p>Backups, monitoring, edits, and social posts, all handled on your plan.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="content" class="section">
+      <div class="container">
+        <h2 class="section-title">Content creation</h2>
+        <p class="section-intro">
+          The same video, sound, and graphics production we offer clients, applied
+          to our own D&amp;D actual&#8209;play series.
+        </p>
+
+        <div class="card-grid card-grid-2">
+          <article class="card project">
+            <p class="project-role">Our own project</p>
+            <h3>AcererakNRoll</h3>
+            <p>
+              <em>Alaundo&rsquo;s Last Prophecy</em> is a full actual&#8209;play
+              series with original video, sound design, and world art, plus a custom
+              character&nbsp;&amp; dice&#8209;roller web app.
+            </p>
+            <a class="project-link" href="https://acereraknroll.com" target="_blank" rel="noopener">acereraknroll.com</a>
+          </article>
+
+          <article class="card card-video">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/BiHni7EkMdQ?rel=0"
+                title="Alaundo&rsquo;s Last Prophecy series trailer"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Alaundo&rsquo;s Last Prophecy series trailer</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Who you&rsquo;re working with</h2>
+
+        <div class="about-layout">
+          <img class="about-photo" src="assets/keith-about.jpg" alt="Keith Jackson, founder of KiteForge, running a tabletop game" width="900" height="601" loading="lazy">
+          <div class="about-body">
+            <p>
+              KiteForge is a one&#8209;person show...me, Keith. I spent about 30 years
+              bartending, starting in New Orleans and working my way through Honolulu
+              and Denver before landing back home in Metairie, LA. Pat O&rsquo;Brien&rsquo;s,
+              Johnny White&rsquo;s, and opening the first Lucky Strike in Hawaii are all
+              somewhere on that resume.
+            </p>
+            <p>
+              Around 2023 I went back to school for code (Nucamp, then a stretch
+              mentoring other students at Joy of Coding) and picked up the full&#8209;stack
+              side: JavaScript, React, Node, PostgreSQL, and a lot of hours in Git.
+              These days I build and host small&#8209;business sites, run D&amp;D games
+              that moved online years ago, and I&rsquo;m putting together an animated
+              series on YouTube.
+            </p>
+            <p>
+              Bartending taught me the part that actually matters here: keep it simple,
+              skip the jargon, and just handle it so you don&rsquo;t have to think about it.
+            </p>
+            <p class="about-fineprint">KiteForge is a registered Louisiana trade name.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social" class="section">
+      <div class="container">
+        <h2 class="section-title">Follow along</h2>
+        <p class="section-intro">
+          New work, behind the scenes, and what we&rsquo;re shipping. See how we
+          keep a feed active, then picture yours.
+        </p>
+
+        <div class="social-layout">
+          <div class="social-feed">
+            <iframe
+              class="fb-embed"
+              title="KiteForge on Facebook"
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkiteforgewebdesigns&tabs=timeline&width=340&height=640&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+              scrolling="no"
+              frameborder="0"
+              loading="lazy"
+              allowfullscreen="true"
+              allow="clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+
+          <div class="social-follow">
+            <p>Follow KiteForge:</p>
+            <a class="social-btn" href="https://www.facebook.com/kiteforgewebdesigns/" target="_blank" rel="noopener">
+              Facebook
+              <span class="social-btn-sub">kiteforgewebdesigns</span>
+            </a>
+            <a class="social-btn" href="https://www.instagram.com/kiteforge1/" target="_blank" rel="noopener">
+              Instagram
+              <span class="social-btn-sub">&#64;kiteforge1</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <h2 class="section-title">Start a project</h2>
+        <p class="lede">
+          Tell us about your business and what you need. We&rsquo;ll reply within a
+          couple of days with a plan and a quote. No call required.
+        </p>
+
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form"
+          action="/#contact"
+        >
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hp-field">
+            <label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name">
+          </div>
+
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" required autocomplete="email">
+          </div>
+
+          <div class="field">
+            <label for="cf-business">Business name <span class="opt">(optional)</span></label>
+            <input id="cf-business" name="business" type="text" autocomplete="organization">
+          </div>
+
+          <div class="field">
+            <label for="cf-need">What do you need?</label>
+            <select id="cf-need" name="need">
+              <option value="New website">New website</option>
+              <option value="Redesign or migration">Redesign or migration off WordPress</option>
+              <option value="Hosting &amp; care">Hosting &amp; care for an existing site</option>
+              <option value="Social media">Social media content</option>
+              <option value="Something else">Something else</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="cf-phone">Phone <span class="opt">(optional)</span></label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="cf-details">Project details</label>
+            <textarea id="cf-details" name="details" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">Send</button>
+        </form>
+
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+
+        <p class="contact-meta">
+          Prefer email? <a href="mailto:kiteforge1@gmail.com?subject=Project%20inquiry">kiteforge1@gmail.com</a><br>
+          New Orleans, Louisiana &middot; Registered Louisiana trade name
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p>&copy; <span id="year"></span> KiteForge. All rights reserved.</p>
+      <p class="footer-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="mailto:kiteforge1@gmail.com">Email</a>
+        <a href="https://www.instagram.com/kiteforge1/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/kiteforgewebdesigns/" target="_blank" rel="noopener">Facebook</a>
+      </p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- Cloudflare Web Analytics (cookie-free, no consent banner needed) -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "fea5a892bd074f82848012cb2e342255"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>

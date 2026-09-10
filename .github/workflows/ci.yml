@@ -14,14 +14,11 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
+      - run: npm run build
       - run: npx playwright install --with-deps chromium
       - run: npm test
 
-  deploy:
-    needs: test
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Deploy
-        run: echo "TODO -- add deploy step once hosting is chosen (Cloudflare Pages / Netlify / S3+CloudFront)"
+  # Deploys are handled by Netlify's GitHub integration:
+  # - every PR gets a deploy preview
+  # - pushes to main deploy to production
+  # Build config lives in netlify.toml, not here.
