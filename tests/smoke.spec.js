@@ -190,3 +190,35 @@ test("unknown paths 404 and a custom 404 page exists", async ({ page }) => {
   await page.goto("/404.html");
   await expect(page.getByRole("link", { name: "Back to home" })).toBeVisible();
 });
+
+// Catches the most common faulty deploy: a renamed or deleted asset / page.
+for (const path of ["/", "/privacy.html"]) {
+  test(`no broken assets or internal links on ${path}`, async ({ page, baseURL }) => {
+    await page.goto(path);
+
+    // Every same-origin asset referenced in the DOM (img/css/js), plus internal
+    // <a> links. Skips hash anchors, mailto:, and off-site URLs (third-party
+    // embeds and social links are out of scope for a deploy check).
+    const refs = await page.evaluate(() => {
+      const urls = new Set();
+      document.querySelectorAll("img[src]").forEach((el) => urls.add(el.src));
+      document
+        .querySelectorAll('link[rel="stylesheet"][href], script[src]')
+        .forEach((el) => urls.add(el.href || el.src));
+      document.querySelectorAll("a[href]").forEach((el) => {
+        const raw = el.getAttribute("href");
+        if (raw && !raw.startsWith("#") && !raw.startsWith("mailto:")) urls.add(el.href);
+      });
+      return [...urls];
+    });
+
+    const origin = new URL(baseURL).origin;
+    const broken = [];
+    for (const url of refs) {
+      if (!url.startsWith(origin)) continue; // leave third-party alone
+      const res = await page.request.get(url);
+      if (res.status() >= 400) broken.push(`${res.status()} ${url}`);
+    }
+    expect(broken, "same-origin URLs returning >= 400").toEqual([]);
+  });
+}
