@@ -4,10 +4,11 @@
 # Playwright test suite first: if it fails, the deploy is aborted and the last
 # good version stays live. Then scripts/build.sh copies only the deployable
 # files into `dist/` so node_modules / tests / config never ship.
-# (If `playwright install --with-deps` errors on Netlify's image, drop --with-deps.)
+# Note: no `--with-deps` on playwright install - Netlify's build container blocks
+# the sudo it needs. The base image already has the libs headless Chromium uses.
 
 [build]
-  command = "npm ci && npx playwright install --with-deps chromium && npm test && bash ./scripts/build.sh"
+  command = "npm ci && npx playwright install chromium && npm test && bash ./scripts/build.sh"
   publish = "dist"
 
 
