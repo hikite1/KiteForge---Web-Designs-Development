@@ -33,7 +33,7 @@ test("key sections and nav are present", async ({ page }) => {
   ]) {
     await expect(page.getByRole("heading", { name })).toBeVisible();
   }
-  for (const link of ["Services", "Work", "Pricing", "FAQ", "About"]) {
+  for (const link of ["Services", "Work", "Pricing", "FAQ", "About", "Follow"]) {
     await expect(page.locator("#site-nav").getByRole("link", { name: link })).toBeVisible();
   }
 });
